@@ -1,0 +1,45 @@
+{
+  "name": "miamiboat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "start": {
+      "patterns": [
+        "site",
+        "test"
+      ],
+      "extensions": "js,jsx,html",
+      "quiet": true,
+      "legacyWatch": true,
+      "delay": 2500,
+      "runOnChangeOnly": false
+    }
+  },
+  "scripts": {
+    "prod": "NODE_ENV=prod node start.js",
+    "start": "NODE_ENV=dev node start.js",
+    "dev": "npm-watch start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivivan/miamiboat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sivivan/miamiboat/issues"
+  },
+  "homepage": "https://github.com/sivivan/miamiboat#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "forever": "^0.15.3",
+    "http-server": "^0.11.1",
+    "nodemon": "^1.18.10"
+  },
+  "devDependencies": {
+    "npm-watch": "^0.6.0"
+  }
+}
