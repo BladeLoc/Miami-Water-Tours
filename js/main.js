@@ -172,6 +172,7 @@ renderPage = e => {
         const section = e.target.closest('a').classList[0];
 
         if(section !== 'home') elements.banner.style.display = 'none';
+        
 
         if(section !== 'contactdetails') {
             e.preventDefault();
@@ -189,19 +190,19 @@ renderPage = e => {
             case 'boat':
             case 'boats_tours':
                 markup = `
-                <section id="main_section" class="well-3--inset-1 bg-default-variant-1 text-center boats_tours-section">
+                <section id="main_section" class="well-3--inset-1 bg-default-variant-1 text-center boats_tours-section animate__animated animate__zoomIn">
                 <div class="container">
                 <div class="row offset-1 flow-offset-1 text-md-left">
                 <div class="col-md-5">
                   <div class="infinity-slider-wrap">
                     <div class="infinity-slider">
-                      <img src="images/searey/2.jpg" alt="Sea Rey">
-                      <img src="images/searey/3.jpg" alt="Sea Rey">
-                      <img src="images/searey/4.jpg" alt="Sea Rey">
-                      <img src="images/searey/5.jpg" alt="Sea Rey">
-                      <img src="images/searey/6.jpg" alt="Sea Rey">
-                      <img src="images/searey/7.jpg" alt="Sea Rey">
-                      <img src="images/searey/1.jpg" alt="Sea Rey">
+                        <img src="images/searey/2.jpg" alt="Sea Rey">
+                        <img src="images/searey/3.jpg" alt="Sea Rey">
+                        <img src="images/searey/4.jpg" alt="Sea Rey">
+                        <img src="images/searey/5.jpg" alt="Sea Rey">
+                        <img src="images/searey/6.jpg" alt="Sea Rey">
+                        <img src="images/searey/7.jpg" alt="Sea Rey">
+                        <img src="images/searey/1.jpg" alt="Sea Rey">
                     </div>
                     <img class="btn-to-left" src="images/vector/arrow-point-to-left.svg" alt="to-left">
                     <img class="btn-to-right" src="images/vector/arrow-point-to-right (2).svg" alt="to-right">
@@ -242,7 +243,7 @@ renderPage = e => {
 
             case 'faq':
             markup = `
-            <section id="main_section" class="well-3--inset-1 bg-default-variant-1">
+            <section id="main_section" class="well-3--inset-1 bg-default-variant-1 animate__animated animate__zoomIn">
                 <div class="container">
                     <h3 class="text-center">Rules</h3>
                     <dl class="terms-list">
@@ -288,6 +289,7 @@ renderPage = e => {
             break;
 
             default:
+                // $(elements.banner).slideDown();
             elements.banner.style.display = 'block';
         }
     }  
